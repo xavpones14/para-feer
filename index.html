@@ -80,6 +80,7 @@
         }
         .music-container {
             display: none;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -115,7 +116,8 @@
     </div>
 
     <div id="music" class="music-container">
-        <iframe width="0" height="0" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/arianagrande/ariana-grande-daydreamin-live&auto_play=true" frameborder="0"></iframe>
+        <iframe id="musicPlayer" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/arianagrande/ariana-grande-daydreamin-live&auto_play=false"></iframe>
     </div>
     
     <script>
@@ -137,6 +139,9 @@
         }
         function aceptar() {
             document.getElementById('music').style.display = 'block';
+            let musicPlayer = document.getElementById('musicPlayer');
+            let src = musicPlayer.src;
+            musicPlayer.src = src + "&auto_play=true";
             alert('GRACIAS POR ESTAR CONMIGO, TE AMO');
         }
         document.getElementById('pantalla1').style.display = 'block';

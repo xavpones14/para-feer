@@ -56,6 +56,20 @@
         button:hover {
             background-color: #ff69b4;
         }
+        .boton-aceptar {
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #ff1493;
+            padding: 15px 30px;
+            border-radius: 15px;
+            animation: latido 1.5s infinite;
+            margin-top: 30px;
+        }
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
         .hearts {
             position: fixed;
             width: 100%;
@@ -83,6 +97,12 @@
             position: fixed;
             bottom: 10px;
             width: 100%;
+        }
+        .mensaje {
+            font-size: 36px;
+            font-weight: bold;
+            color: red;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -114,10 +134,11 @@
     
     <div id="pantalla4" class="container">
         <h1>¿Quieres ser mi San Valentín? 💖</h1>
-        <button onclick="aceptar()">Sí</button>
+        <button class="boton-aceptar" onclick="aceptar()">Sí</button>
     </div>
 
     <div id="music" class="music-container">
+        <p class="mensaje">ERES LA ÚNICA QUE QUIERO, CREO QUE SOY ADICTO A TU LUZ</p>
         <iframe id="musicPlayer" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/arianagrande/ariana-grande-daydreamin-live&auto_play=false"></iframe>
     </div>
@@ -162,3 +183,4 @@
     </script>
 </body>
 </html>
+
